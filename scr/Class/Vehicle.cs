@@ -1,5 +1,6 @@
 ﻿using System; //using=import
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Text;
 
 namespace BPascal.LessonEx2.ClassDomain
@@ -18,14 +19,14 @@ namespace BPascal.LessonEx2.ClassDomain
     public class Vehicle
     {
         private int _id;
-        private string _licensePlate;
         private int _odometerKm;
         private double _rent;
         private double _fuelLvPerc;
+        public string LicensePlate { get; private set; } //get è pubblico e set è privato
 
-        public string GetLicensePlate() 
-        {  
-            return _licensePlate;
-        }
+        public Vehicle(string licensePlate) //{l'unico metodo che non dobbiamo definire metodo di ritorno}
+        {
+            LicensePlate = licensePlate; //set
+        } 
     }
 }

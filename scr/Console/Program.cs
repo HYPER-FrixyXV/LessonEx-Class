@@ -4,8 +4,8 @@ internal class Program
 {
     static void Main(string[] args)
     {
-        Vehicle vehicle = new Vehicle();
-        string license=vehicle.GetLicensePlate();
+        Vehicle vehicle = new Vehicle("ouch");
+        string license=vehicle.LicensePlate;
 
         Console.WriteLine(license);
     }
