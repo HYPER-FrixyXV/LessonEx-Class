@@ -20,11 +20,16 @@ namespace BPascal.LessonEx2.ClassDomain
     {
         private int _id;
         private int _odometerKm;
-        private double _rent;
+        private double _dailyRate;
         private double _fuelLvPerc;
-        public string LicensePlate { get; private set; } //get è pubblico e set è privato
 
-        public Vehicle(string licensePlate) //{l'unico metodo che non dobbiamo definire metodo di ritorno}
+        public string LicensePlate { get; private set; }
+        public int ID { get; private set; }
+        public int Odometer{ get; private set; }
+        public double DailyRate { get; private set; }
+        public double FuelLvRate { get; private set; }
+
+        public Vehicle(string licensePlate, int id, int odometerKM, double dailyRate, double fuelLvPerc) //{l'unico metodo che non dobbiamo definire metodo di ritorno}
         {
             LicensePlate = licensePlate; //set
         } 
