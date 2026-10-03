@@ -1,0 +1,9 @@
+<Solution>
+  <Folder Name="/scr/">
+    <Project Path="scr/Class/BPascal.LessonEx2.ClassDomain.csproj" />
+    <Project Path="scr/Console/Console.csproj" />
+  </Folder>
+  <Folder Name="/test/">
+    <Project Path="test/TestProject1/TestProject1.csproj" />
+  </Folder>
+</Solution>
