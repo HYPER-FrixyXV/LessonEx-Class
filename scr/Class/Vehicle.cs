@@ -23,6 +23,9 @@ namespace BPascal.LessonEx2.ClassDomain
         private double _rent;
         private double _fuelLvPerc;
 
-
+        public string GetLicensePlate() 
+        {  
+            return _licensePlate;
+        }
     }
 }
