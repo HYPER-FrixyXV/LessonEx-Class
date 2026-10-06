@@ -32,6 +32,10 @@ namespace BPascal.LessonEx2.ClassDomain
         public Vehicle(string licensePlate, int id, int odometerKM, double dailyRate, double fuelLvPerc) //{l'unico metodo che non dobbiamo definire metodo di ritorno}
         {
             LicensePlate = licensePlate; //set
+            id = ID
+            odometerKm = Odometer
+            dailyRate = DailyRate
+            fuelLvRate = FuelLvRate
         } 
     }
 }
