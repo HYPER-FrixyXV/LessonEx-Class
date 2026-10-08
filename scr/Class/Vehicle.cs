@@ -23,7 +23,7 @@ namespace BPascal.LessonEx2.ClassDomain
         private double _dailyRate;
         private double _fuelLvPerc;
 
-        public string LicensePlate { get; private set; }
+        public string LicensePlate { get; private set; } //TODO: implementare set per validazione targa
         public int ID { get; private set; }
         public int Odometer
         {
@@ -65,6 +65,19 @@ namespace BPascal.LessonEx2.ClassDomain
             Odometer = odometerKM;
             DailyRate = dailyRate ;
             FuelLvPerc = fuelLvPerc ;
+        }
+
+        public void RegisterData(int consumedKm, double consumedFuel)
+        {
+            if (consumedKm <= 0) { 
+                throw new ArgumentException($"value invalid {nameof(consumedKm)}");
+            }
+            if (consumedFuel <= 0 || (FuelLvPerc -= consumedFuel)<0)
+            {
+                throw new ArgumentException($"value invalid {nameof(consumedFuel)}");
+            }
+            Odometer += consumedKm; //chiamate al set
+            FuelLvPerc -= consumedFuel; //chiamate al set
         }
     }
 }
