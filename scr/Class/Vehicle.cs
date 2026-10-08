@@ -25,17 +25,46 @@ namespace BPascal.LessonEx2.ClassDomain
 
         public string LicensePlate { get; private set; }
         public int ID { get; private set; }
-        public int Odometer{ get; private set; }
-        public double DailyRate { get; private set; }
-        public double FuelLvRate { get; private set; }
+        public int Odometer
+        {
+            get { return _odometerKm; }
+            private set 
+            {
+                if(value < 0) {
+                    throw new ArgumentException("Odometer value cannot be negative.");
+                }
+            }
+        }
+        public double DailyRate
+        {
+            get { return _dailyRate; }
+            private set
+            {
+                if (value < 0)
+                {
+                    throw new ArgumentException("Daily rate value cannot be negative.");
+                }
+            }
+        }
+        public double FuelLvPerc
+        {
+            get { return _fuelLvPerc; }
+            private set
+            {
+                if (value < 0 || value >100)
+                {
+                    throw new ArgumentException("Fuel level percentage value cannot be negative.");
+                }
+            }
+        }
 
         public Vehicle(string licensePlate, int id, int odometerKM, double dailyRate, double fuelLvPerc) //{l'unico metodo che non dobbiamo definire metodo di ritorno}
         {
             LicensePlate = licensePlate; //set
-            id = ID
-            odometerKm = Odometer
-            dailyRate = DailyRate
-            fuelLvRate = FuelLvRate
-        } 
+            ID = id;
+            Odometer = odometerKM;
+            DailyRate = dailyRate ;
+            FuelLvPerc = fuelLvPerc ;
+        }
     }
 }
