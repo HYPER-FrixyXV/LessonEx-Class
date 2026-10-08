@@ -31,7 +31,7 @@ namespace BPascal.LessonEx2.ClassDomain
             private set 
             {
                 if(value < 0) {
-                    throw new ArgumentException("Odometer value cannot be negative.");
+                    throw new ArgumentException($"value invalid {nameof(value)}");
                 }
             }
         }
@@ -42,7 +42,7 @@ namespace BPascal.LessonEx2.ClassDomain
             {
                 if (value < 0)
                 {
-                    throw new ArgumentException("Daily rate value cannot be negative.");
+                    throw new ArgumentException($"value invalid {nameof(value)}");
                 }
             }
         }
@@ -53,7 +53,7 @@ namespace BPascal.LessonEx2.ClassDomain
             {
                 if (value < 0 || value >100)
                 {
-                    throw new ArgumentException("Fuel level percentage value cannot be negative.");
+                    throw new ArgumentException($"value invalid {nameof(value)}");
                 }
             }
         }

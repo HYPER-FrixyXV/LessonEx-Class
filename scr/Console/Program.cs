@@ -4,11 +4,22 @@ internal class Program
 {
     static void Main(string[] args)
     {
-        Vehicle vehicle1 = new Vehicle("abc", 5, 2, 2.5, 100);
+        try
+        {
+            Vehicle vehicle1 = new Vehicle("abc", 5, 2, 2.5, 100);
 
-        Console.WriteLine(vehicle1.LicensePlate);
-        Console.WriteLine(vehicle1.Odometer);
-        Console.WriteLine(vehicle1.DailyRate);
-        Console.WriteLine(vehicle1.FuelLvPerc);
+            string license = vehicle1.LicensePlate;
+            Console.WriteLine(license);
+
+            Console.WriteLine(vehicle1.ID);
+            Console.WriteLine(vehicle1.Odometer);
+            Console.WriteLine(vehicle1.DailyRate);
+            Console.WriteLine(vehicle1.FuelLvPerc);
+        }
+        catch(Exception ex)
+        {
+            Console.WriteLine(ex.Message);
+        }
+        
     }
 }
